@@ -4,41 +4,7 @@
 }</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
   background-color: var(--darkreader-inline-bgcolor) !important;
 }
-[data-darkreader-inline-bgimage] {
-  background-image: var(--darkreader-inline-bgimage) !important;
-}
-[data-darkreader-inline-border] {
-  border-color: var(--darkreader-inline-border) !important;
-}
-[data-darkreader-inline-border-bottom] {
-  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
-}
-[data-darkreader-inline-border-left] {
-  border-left-color: var(--darkreader-inline-border-left) !important;
-}
-[data-darkreader-inline-border-right] {
-  border-right-color: var(--darkreader-inline-border-right) !important;
-}
-[data-darkreader-inline-border-top] {
-  border-top-color: var(--darkreader-inline-border-top) !important;
-}
-[data-darkreader-inline-boxshadow] {
-  box-shadow: var(--darkreader-inline-boxshadow) !important;
-}
-[data-darkreader-inline-color] {
-  color: var(--darkreader-inline-color) !important;
-}
-[data-darkreader-inline-fill] {
-  fill: var(--darkreader-inline-fill) !important;
-}
-[data-darkreader-inline-stroke] {
-  stroke: var(--darkreader-inline-stroke) !important;
-}
-[data-darkreader-inline-outline] {
-  outline-color: var(--darkreader-inline-outline) !important;
-}
-[data-darkreader-inline-stopcolor] {
-  stop-color: var(--darkreader-inline-stopcolor) !important;
+
 }</style><style class="darkreader darkreader--variables" media="screen">:root {
    --darkreader-neutral-background: #131516;
    --darkreader-neutral-text: #d8d4cf;
@@ -46,56 +12,7 @@
    --darkreader-selection-text: #e8e6e3;
 }</style><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script class="darkreader darkreader--proxy">(function injectProxy() {
         document.dispatchEvent(new CustomEvent('__darkreader__inlineScriptsAllowed'));
-        const addRuleDescriptor = Object.getOwnPropertyDescriptor(CSSStyleSheet.prototype, 'addRule');
-        const insertRuleDescriptor = Object.getOwnPropertyDescriptor(CSSStyleSheet.prototype, 'insertRule');
-        const deleteRuleDescriptor = Object.getOwnPropertyDescriptor(CSSStyleSheet.prototype, 'deleteRule');
-        const removeRuleDescriptor = Object.getOwnPropertyDescriptor(CSSStyleSheet.prototype, 'removeRule');
-        const cleanUp = () => {
-            Object.defineProperty(CSSStyleSheet.prototype, 'addRule', addRuleDescriptor);
-            Object.defineProperty(CSSStyleSheet.prototype, 'insertRule', insertRuleDescriptor);
-            Object.defineProperty(CSSStyleSheet.prototype, 'deleteRule', deleteRuleDescriptor);
-            Object.defineProperty(CSSStyleSheet.prototype, 'removeRule', removeRuleDescriptor);
-            document.removeEventListener('__darkreader__cleanUp', cleanUp);
-            document.removeEventListener('__darkreader__addUndefinedResolver', addUndefinedResolver);
-        };
-        const addUndefinedResolver = (e) => {
-            customElements.whenDefined(e.detail.tag).then(() => {
-                document.dispatchEvent(new CustomEvent('__darkreader__isDefined', { detail: { tag: e.detail.tag } }));
-            });
-        };
-        document.addEventListener('__darkreader__cleanUp', cleanUp);
-        document.addEventListener('__darkreader__addUndefinedResolver', addUndefinedResolver);
-        const updateSheetEvent = new Event('__darkreader__updateSheet');
-        function proxyAddRule(selector, style, index) {
-            addRuleDescriptor.value.call(this, selector, style, index);
-            if (this.ownerNode && !this.ownerNode.classList.contains('darkreader')) {
-                this.ownerNode.dispatchEvent(updateSheetEvent);
-            }
-            return -1;
-        }
-        function proxyInsertRule(rule, index) {
-            const returnValue = insertRuleDescriptor.value.call(this, rule, index);
-            if (this.ownerNode && !this.ownerNode.classList.contains('darkreader')) {
-                this.ownerNode.dispatchEvent(updateSheetEvent);
-            }
-            return returnValue;
-        }
-        function proxyDeleteRule(index) {
-            deleteRuleDescriptor.value.call(this, index);
-            if (this.ownerNode && !this.ownerNode.classList.contains('darkreader')) {
-                this.ownerNode.dispatchEvent(updateSheetEvent);
-            }
-        }
-        function proxyRemoveRule(index) {
-            removeRuleDescriptor.value.call(this, index);
-            if (this.ownerNode && !this.ownerNode.classList.contains('darkreader')) {
-                this.ownerNode.dispatchEvent(updateSheetEvent);
-            }
-        }
-        Object.defineProperty(CSSStyleSheet.prototype, 'addRule', Object.assign({}, addRuleDescriptor, { value: proxyAddRule }));
-        Object.defineProperty(CSSStyleSheet.prototype, 'insertRule', Object.assign({}, insertRuleDescriptor, { value: proxyInsertRule }));
-        Object.defineProperty(CSSStyleSheet.prototype, 'deleteRule', Object.assign({}, deleteRuleDescriptor, { value: proxyDeleteRule }));
-        Object.defineProperty(CSSStyleSheet.prototype, 'removeRule', Object.assign({}, removeRuleDescriptor, { value: proxyRemoveRule }));
+
     })()</script><style class="darkreader darkreader--user-agent" media="screen">html {
     background-color: #181a1b !important;
 }
