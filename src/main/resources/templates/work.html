@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<<html class="no-js" lang="en"><head><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, embed[type="application/pdf"] {
+<html class="no-js" lang="en"><head><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, embed[type="application/pdf"] {
     filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
 }</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
   background-color: var(--darkreader-inline-bgcolor) !important;
@@ -44,7 +44,20 @@
    --darkreader-neutral-text: #d8d4cf;
    --darkreader-selection-background: #004daa;
    --darkreader-selection-text: #e8e6e3;
-
+}</style><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script class="darkreader darkreader--proxy">(function injectProxy() {
+        document.dispatchEvent(new CustomEvent('__darkreader__inlineScriptsAllowed'));
+        const addRuleDescriptor = Object.getOwnPropertyDescriptor(CSSStyleSheet.prototype, 'addRule');
+        const insertRuleDescriptor = Object.getOwnPropertyDescriptor(CSSStyleSheet.prototype, 'insertRule');
+        const deleteRuleDescriptor = Object.getOwnPropertyDescriptor(CSSStyleSheet.prototype, 'deleteRule');
+        const removeRuleDescriptor = Object.getOwnPropertyDescriptor(CSSStyleSheet.prototype, 'removeRule');
+        const cleanUp = () => {
+            Object.defineProperty(CSSStyleSheet.prototype, 'addRule', addRuleDescriptor);
+            Object.defineProperty(CSSStyleSheet.prototype, 'insertRule', insertRuleDescriptor);
+            Object.defineProperty(CSSStyleSheet.prototype, 'deleteRule', deleteRuleDescriptor);
+            Object.defineProperty(CSSStyleSheet.prototype, 'removeRule', removeRuleDescriptor);
+            document.removeEventListener('__darkreader__cleanUp', cleanUp);
+            document.removeEventListener('__darkreader__addUndefinedResolver', addUndefinedResolver);
+        };
         const addUndefinedResolver = (e) => {
             customElements.whenDefined(e.detail.tag).then(() => {
                 document.dispatchEvent(new CustomEvent('__darkreader__isDefined', { detail: { tag: e.detail.tag } }));
@@ -135,6 +148,14 @@ select:-webkit-autofill {
     background-color: #004daa !important;
     color: #e8e6e3 !important;
 }</style>
+    <!-- Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-42242964-1"></script>
+    <script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'UA-42242964-1');
+		</script>
 
     <!-- Regular data -->
     <meta charset="utf-8">
@@ -143,7 +164,7 @@ select:-webkit-autofill {
     <!-- Description -->
     <meta name="author" content="Jonathan Sladish">
     <meta name="description" content="I design &; build digital products.">
-    <meta name="keywords" content="Jonathan Sladish,portfolio,graphic,design,product,manager,freelance,interface">
+    <meta name="keywords" content="Jonathan Sladish,portfolio,graphic,design,experience,product,manager,freelance,interface">
     <meta name="Resource-type" content="Document">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -151,15 +172,32 @@ select:-webkit-autofill {
     <meta property="og:site_name" content="Jonathan Sladish">
     <meta property="og:title" content="Jonathan Sladish">
     <meta property="og:description" content="I design &; build digital products.">
-
+    <meta property="og:image" content="https://my photo">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jonathan.works">
 
     <!-- Title -->
-    <title>Jonathan Sldish</title>
+    <title>Jonathan Sladish</title>
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Jonathan Sladish">
+    <meta name="twitter:description" content="I design &; build digital products.">
+    <meta name="twitter:url" content="https://github.com/JonathanSladish/TwitterProj">
+    <meta name="twitter:image" content="https://github.com/JonathanSladish/TwitterProj">
+
+    <!-- Icons -->
+    <link href="https://" type="image/png" rel="image_src">
+    <link href="https://github.com/JonathanSladish/TwitterProj" rel="canonical">
 
     <!-- CSS -->
     <link href="../css/style.css" rel="stylesheet" type="text/css"><style class="darkreader darkreader--sync" media="screen"></style>
 
-
+    <meta name="darkreader" content="5ad9a3b8c79bdfd226143337f6e9700c"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
 ::placeholder {
     opacity: 0.5 !important;
 }
@@ -179,13 +217,25 @@ a[href="https://coinmarketcap.com/"] > svg[width="94"][height="16"] > path {
     <div class="top-bottom-margin animate">
 
         <!-- Work -->
-        <a href="ecommers/">
+        <a href="Twitter/">
+            <div class="on-hover-40 hide-text-block work-block">
+                <h2 class="text-color-white">Twitter</h2>
+                <a class="on-hover-40 text-color-red" href="https://github.com/JonathanSladish/TwitterProj" target="_blank">Twitter</a>
+            </div>
         </a>
         <!-- Work -->
-        <a href="twitter/">
+        <a href="Ecommerce/">
+            <div class="on-hover-40 hide-text-block work-block">
+                <h2 class="text-color-white">Ecommerce</h2>
+                <a class="on-hover-40 text-color-red" href="https://github.com/JonathanSladish/E-Commerce-Project1" target="_blank">Ecommerce</a>
+            </div>
         </a>
         <!-- Work -->
-        <a href="weatherapp/">
+        <a href="WeatherApp/">
+            <div class="on-hover-40 hide-text-block work-block">
+                <h2 class="text-color-white">WeatherApp</h2>
+                <a class="on-hover-40 text-color-red" href="https://github.com/JonathanSladish/WeatherApp" target="_blank">WeatherApp</a>
+            </div>
         </a>
 
     </div>
@@ -194,4 +244,4 @@ a[href="https://coinmarketcap.com/"] > svg[width="94"][height="16"] > path {
 
 
 
-</body></html>
+</body></html></body></html></body></html>
